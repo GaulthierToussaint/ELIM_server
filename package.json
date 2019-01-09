@@ -20,8 +20,9 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "mongoose": "^5.4.2",
-    "random-forest-classifier": "^0.6.0"
+    "ml-dataset-iris": "^1.0.0",
+    "ml-random-forest": "^1.0.3",
+    "mongoose": "^5.4.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

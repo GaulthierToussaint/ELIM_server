@@ -3,18 +3,24 @@ const mongoose = require('mongoose');
 const app = express();
 const RandomForestClassifier = require('random-forest-classifier').RandomForestClassifier;
 
-import Activities from './models/activity.model.ts';
+import Activity from './models/activity.model.ts';
+import bodyParser from 'body-parser';
 
 const db = mongoose.connect('mongodb://localhost:27017/local');
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.get('/', function (req, res) {
-  Activities.findOne({}, (err, activities) => {
+  Activity.findOne({}, (err, activities) => {
     res.json(activities);
   });
 })
 
 app.post('/', function(req, res) {
-    res.send('post data ok ');
+    let activity = new Activity(req.body);
+    activity.save();
+    res.status(201).send(activity);
 })
 
 app.listen(3000, function () {

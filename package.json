@@ -1,0 +1,22 @@
+{
+  "name": "elim_server",
+  "version": "1.0.0",
+  "description": "A Node server made for a school project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GaulthierToussaint/ELIM_server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GaulthierToussaint/ELIM_server/issues"
+  },
+  "homepage": "https://github.com/GaulthierToussaint/ELIM_server#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
